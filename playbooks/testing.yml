@@ -1,0 +1,24 @@
+---
+- name: testing1
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  become: false
+  tasks:
+    - name: ping1
+      ansible.builtin.ping:
+#     - name: ping2
+#       ansible.builtin.ping:
+#     - name: fail1
+#       ansible.builtin.fail:
+#       when: 3 | random == 1
+
+- name: testing2
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  become: false
+  tasks:
+    - name: debug1
+      ansible.builtin.debug:
+        msg: debug1

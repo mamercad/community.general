@@ -1,0 +1,5 @@
+all:
+  hosts:
+    localhost:
+      ansible_connection: local
+      ansible_python_interpreter: "{{ lookup('ansible.builtin.pipe', 'which python3') }}"
